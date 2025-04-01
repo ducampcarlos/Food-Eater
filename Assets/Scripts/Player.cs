@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     float rot = 0;
     int score = 0;
 
+    [SerializeField] GameObject WinText;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,7 +59,7 @@ public class Player : MonoBehaviour
 
             if (score >= 5)
             {
-                print("You Win!");
+                WinText.SetActive(true);
             }
         }
         else if (collision.gameObject.CompareTag("Danger"))

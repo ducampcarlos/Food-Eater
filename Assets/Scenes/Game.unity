@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 419855704}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,18 +1161,6 @@ PrefabInstance:
     - target: {fileID: 5460773183392390201, guid: dd273f08c0a35194f9f78b1ed1681de8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113948341989895620, guid: dd273f08c0a35194f9f78b1ed1681de8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.09306024
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113948341989895620, guid: dd273f08c0a35194f9f78b1ed1681de8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.09433961
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113948341989895620, guid: dd273f08c0a35194f9f78b1ed1681de8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.08410465
       objectReference: {fileID: 0}
     - target: {fileID: 7139435965942651651, guid: dd273f08c0a35194f9f78b1ed1681de8, type: 3}
       propertyPath: m_Name

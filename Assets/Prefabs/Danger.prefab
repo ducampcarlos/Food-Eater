@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7893828776397876782}
   m_Layer: 0
   m_Name: Danger
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: c51e77f6cd99cb744827b56226d4e74d, type: 3}
-  m_Color: {r: 0.24817553, g: 0.31132078, b: 0.30293867, a: 1}
+  m_Color: {r: 0.08410465, g: 0.09433961, b: 0.09306024, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

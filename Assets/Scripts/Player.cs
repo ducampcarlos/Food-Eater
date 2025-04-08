@@ -54,12 +54,13 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Food"))
         {
-            collision.gameObject.SetActive(false); // Desactiva antes de destruir
-            Destroy(collision.gameObject, 0.1f);  // Espera un poco antes de destruir
+            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject, 0.1f);
             GetComponent<PlayerHealth>().Heal(25f);
         }
         else if (collision.gameObject.CompareTag("Danger"))
         {
+            collision.gameObject.SetActive(false);
             GetComponent<PlayerHealth>().TakeDamage(25f);
         }
     }

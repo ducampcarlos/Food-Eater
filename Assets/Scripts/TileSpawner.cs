@@ -10,6 +10,16 @@ public class TileSpawner : MonoBehaviour
     private Dictionary<Vector2Int, GameObject> spawnedTiles = new Dictionary<Vector2Int, GameObject>();
     private Vector2Int currentPlayerTile;
 
+    void Start()
+    {
+        currentPlayerTile = new Vector2Int(
+            Mathf.FloorToInt(player.position.x / tileSize),
+            Mathf.FloorToInt(player.position.y / tileSize)
+        );
+
+        UpdateTilesAroundPlayer(); // <- Esto inicializa el piso al arrancar
+    }
+
     void Update()
     {
         if (!GameManager.Instance.gameStarted) return;
@@ -28,12 +38,11 @@ public class TileSpawner : MonoBehaviour
 
     void UpdateTilesAroundPlayer()
     {
-        // Solo mantener tiles en un área de 3x3 alrededor del jugador
         List<Vector2Int> neededTiles = new List<Vector2Int>();
 
-        for (int x = -1; x <= 1; x++)
+        for (int x = -2; x <= 2; x++) // ahora son 5 tiles horizontales
         {
-            for (int y = -1; y <= 1; y++)
+            for (int y = -1; y <= 1; y++) // 3 tiles verticales
             {
                 Vector2Int tileCoord = currentPlayerTile + new Vector2Int(x, y);
                 neededTiles.Add(tileCoord);
@@ -41,15 +50,14 @@ public class TileSpawner : MonoBehaviour
                 if (!spawnedTiles.ContainsKey(tileCoord))
                 {
                     Vector3 spawnPos = new Vector3(tileCoord.x * tileSize, tileCoord.y * tileSize, 0);
-                    GameObject tile = Instantiate(tilePrefab, spawnPos, Quaternion.identity);
+                    GameObject tile = Instantiate(tilePrefab, spawnPos, Quaternion.identity, transform);
                     spawnedTiles.Add(tileCoord, tile);
                 }
             }
         }
 
-        // Eliminar tiles que ya no se necesitan
+        // Eliminar tiles fuera del rango
         List<Vector2Int> toRemove = new List<Vector2Int>();
-
         foreach (var coord in spawnedTiles.Keys)
         {
             if (!neededTiles.Contains(coord))

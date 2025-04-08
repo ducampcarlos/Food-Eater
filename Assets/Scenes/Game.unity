@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 419855705}
-  tilePrefab: {fileID: 6546211700803069070, guid: 0cda651e44f114843bfb90b97b42bc37, type: 3}
+  tilePrefab: {fileID: 2006566265149357221, guid: 76c25c4e6c19299438be68240c5e2987, type: 3}
   tileSize: 7
 --- !u!4 &543699897
 Transform:

@@ -40,10 +40,15 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Movimiento hacia adelante constante
-        rb.AddForce(transform.up * acceleration, ForceMode2D.Force);
+        if (!GameManager.Instance.gameStarted)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            return;
+        }
 
-        // Giro con dirección
+        rb.AddForce(transform.up * acceleration, ForceMode2D.Force);
         rb.MoveRotation(rb.rotation + steerDirection * steering * Time.fixedDeltaTime);
     }
+
 }

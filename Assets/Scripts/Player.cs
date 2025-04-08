@@ -56,16 +56,11 @@ public class Player : MonoBehaviour
         {
             collision.gameObject.SetActive(false); // Desactiva antes de destruir
             Destroy(collision.gameObject, 0.1f);  // Espera un poco antes de destruir
-            score++;
-
-            if (score >= 5)
-            {
-                WinText.SetActive(true);
-            }
+            GetComponent<PlayerHealth>().Heal(25f);
         }
         else if (collision.gameObject.CompareTag("Danger"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GetComponent<PlayerHealth>().TakeDamage(25f);
         }
     }
 }

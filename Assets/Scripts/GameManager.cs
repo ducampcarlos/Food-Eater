@@ -33,4 +33,10 @@ public class GameManager : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );
     }
+
+    public void GameOver()
+    {
+        gameStarted = false;
+        UIManager.Instance.ShowGameOverScreen();
+    }
 }

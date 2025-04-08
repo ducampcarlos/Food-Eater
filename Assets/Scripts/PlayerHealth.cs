@@ -11,12 +11,26 @@ public class PlayerHealth : MonoBehaviour
     [Header("Explosion")]
     public GameObject explosionPrefab;
 
+    [Header("Damage Over Time")]
+    public float damagePerSecond = 1f;
+    private bool isTakingPassiveDamage = true;
+
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
     }
+
+    void Update()
+    {
+        if (isTakingPassiveDamage && GameManager.Instance.gameStarted)
+        {
+            TakeDamage(damagePerSecond * Time.deltaTime);
+        }
+    }
+
 
     public void TakeDamage(float amount)
     {

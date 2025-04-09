@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Danger"))
         {
+            ExplosionManager.Instance.SpawnExplosion(collision.gameObject.transform.position);
             collision.gameObject.SetActive(false);
             GetComponent<PlayerHealth>().TakeDamage(25f);
         }

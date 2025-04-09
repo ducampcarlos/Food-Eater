@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Explode()
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        ExplosionManager.Instance.SpawnExplosion(transform.position);
         Destroy(gameObject);
         GameManager.Instance.GameOver();
     }

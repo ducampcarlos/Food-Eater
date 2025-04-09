@@ -17,5 +17,11 @@ public class Player : MonoBehaviour
             collision.gameObject.SetActive(false);
             GetComponent<PlayerHealth>().TakeDamage(25f);
         }
+        else if (collision.CompareTag("Objective"))
+        {
+            ScoreManager.Instance.AddScore(500); 
+            ObjectiveManager.Instance.SpawnNewObjective();
+            Destroy(collision.gameObject);
+        }
     }
 }

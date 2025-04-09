@@ -26,6 +26,10 @@ public class CarController : MonoBehaviour
             float touchX = Touchscreen.current.primaryTouch.position.x.ReadValue();
             steerDirection = (touchX < Screen.width / 2f) ? 1f : -1f;
         }
+        else
+        {
+            steerDirection = 0;
+        }
 #elif UNITY_STANDALONE || UNITY_WEBGL
         if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed)
         {
@@ -34,6 +38,10 @@ public class CarController : MonoBehaviour
         else if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed)
         {
             steerDirection = -1f;
+        }
+        else
+        {
+            steerDirection = 0;
         }
 #endif
     }

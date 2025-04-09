@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
         UIManager.Instance.HidePlayButton();
         ScoreManager.Instance.StartCounting();
+        ObjectiveManager.Instance.SpawnNewObjective();
     }
 
     public void ResetGame()

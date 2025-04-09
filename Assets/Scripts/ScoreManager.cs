@@ -26,6 +26,12 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public void AddScore(float amount)
+    {
+        score += amount;
+        UpdateUI();
+    }
+
     public void StartCounting()
     {
         isCounting = true;

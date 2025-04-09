@@ -8,9 +8,6 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public Slider healthBar;
 
-    [Header("Explosion")]
-    public GameObject explosionPrefab;
-
     [Header("Damage Over Time")]
     public float damagePerSecond = 1f;
     private bool isTakingPassiveDamage = true;

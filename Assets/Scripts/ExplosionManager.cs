@@ -17,7 +17,7 @@ public class ExplosionManager : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject explosion = Instantiate(explosionPrefab);
+            GameObject explosion = Instantiate(explosionPrefab,transform);
             explosion.SetActive(false);
             explosionPool.Enqueue(explosion);
         }

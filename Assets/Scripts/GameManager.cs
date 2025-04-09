@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         gameStarted = true;
         UIManager.Instance.HidePlayButton();
+        ScoreManager.Instance.StartCounting();
     }
 
     public void ResetGame()
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameStarted = false;
-        UIManager.Instance.ShowGameOverScreen();
+        ScoreManager.Instance.StopCounting();
+        UIManager.Instance.ShowGameOverScreen(ScoreManager.Instance.GetFinalScore());
     }
 }

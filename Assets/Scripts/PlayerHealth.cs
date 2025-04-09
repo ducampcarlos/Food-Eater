@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        GameManager.Instance.GameOver(); // Necesita método en GameManager
+        GameManager.Instance.GameOver();
     }
 
     public void Heal(float amount)

@@ -1,9 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ObjectiveManager : MonoBehaviour
 {
     public static ObjectiveManager Instance;
+
+    public static event Action<Transform> OnObjectiveSpawned;
 
     [Header("Objective Settings")]
     public GameObject objectivePrefab;
@@ -34,8 +37,8 @@ public class ObjectiveManager : MonoBehaviour
 
         arrow.GetComponent<Image>().enabled = true;
 
-        Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        float distance = Random.Range(minSpawnDistance, maxSpawnDistance);
+        Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
+        float distance = UnityEngine.Random.Range(minSpawnDistance, maxSpawnDistance);
         Vector3 spawnPosition = player.position + (Vector3)(randomDirection * distance);
         spawnPosition.z = 0;
 
@@ -45,6 +48,8 @@ public class ObjectiveManager : MonoBehaviour
         {
             arrow.SetTarget(currentObjective.transform);
         }
+
+        OnObjectiveSpawned?.Invoke(currentObjective.transform);
     }
 
     public GameObject GetCurrentObjective()

@@ -1630,8 +1630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectivePrefab: {fileID: 5459966253173432555, guid: 679f37e90b2255c4dab60f82f532a28d, type: 3}
-  minSpawnDistance: 50
-  maxSpawnDistance: 200
+  minSpawnDistance: 25
+  maxSpawnDistance: 75
   arrow: {fileID: 1107300600}
 --- !u!1 &807614583
 GameObject:
@@ -7131,9 +7131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c536d5a4f9feb144182740187ea60489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowRect: {fileID: 1107300596}
+  arrowTransform: {fileID: 1107300596}
   target: {fileID: 0}
-  screenMargin: 100
+  distanceFromPlayer: 2
+  hideIfCloserThan: 5
 --- !u!1 &1161292731
 GameObject:
   m_ObjectHideFlags: 0

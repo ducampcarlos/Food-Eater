@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.HidePlayButton();
         ScoreManager.Instance.StartCounting();
         ObjectiveManager.Instance.SpawnNewObjective();
+        AudioManager.Instance.PlayEngineLoop();
     }
 
     public void ResetGame()
@@ -43,5 +44,6 @@ public class GameManager : MonoBehaviour
         gameStarted = false;
         ScoreManager.Instance.StopCounting();
         UIManager.Instance.ShowGameOverScreen(ScoreManager.Instance.GetFinalScore());
+        AudioManager.Instance.Invoke("PlayLose", 0.5f);
     }
 }

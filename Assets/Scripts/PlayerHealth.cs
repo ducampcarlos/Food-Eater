@@ -99,6 +99,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Explode()
     {
+        AudioManager.Instance.PlayCarCrash();
+        AudioManager.Instance.StopEngineLoop();
         ExplosionManager.Instance.SpawnExplosion(transform.position);
         Destroy(gameObject);
         GameManager.Instance.GameOver();

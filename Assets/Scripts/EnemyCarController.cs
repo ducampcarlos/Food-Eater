@@ -66,6 +66,8 @@ public class EnemyCarController : MonoBehaviour
                 playerHealth.TakeDamage(25f);
             }
 
+            AudioManager.Instance.PlayCarCrash();
+
             ExplodeAndDeactivate();
         }
         else if (collision.CompareTag("Danger"))
@@ -76,6 +78,7 @@ public class EnemyCarController : MonoBehaviour
         }
         else if (collision.CompareTag("Enemy"))
         {
+            AudioManager.Instance.PlayCarCrash();
             ExplodeAndDeactivate();
         }
     }

@@ -1,5 +1,6 @@
 # ninja log v5
 41	5744	7652318121839785	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	cbb594c4409e0bba
+5795	7495	7652318140184971	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	972ae4ec0aac0a94
 2	5795	7652318122709292	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bf49b85575e796c1
 35	5947	7652318124409732	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2c4c51fa698ca70c
 22	6128	7652318125787238	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	276169e1be55f157
@@ -7,6 +8,16 @@
 12	6894	7652318133487306	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8f5fb39d53b647d6
 5947	6971	7652318134723396	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9485b30099f6f9ea
 6972	7311	7652318138343611	F:/UnityProjects/Food Eater/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/136c4c57/obj/arm64-v8a/libswappywrapper.so	2a36b53c1c358cc1
-5795	7495	7652318140184971	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	972ae4ec0aac0a94
 5755	7567	7652318140910614	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dcb0b6d8d1e180b2
 7567	7739	7652318142672466	F:/UnityProjects/Food Eater/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/136c4c57/obj/arm64-v8a/libgame.so	5bb66ef7001893f2
+61	3870	7659490158431114	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	cbb594c4409e0bba
+14	3928	7659490158997578	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bf49b85575e796c1
+70	4002	7659490160003357	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dcb0b6d8d1e180b2
+50	4012	7659490160091191	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2c4c51fa698ca70c
+42	4367	7659490163335720	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	276169e1be55f157
+4002	4703	7659490166931646	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9485b30099f6f9ea
+55	5077	7659490170615859	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8f5fb39d53b647d6
+4703	5273	7659490172508057	F:/UnityProjects/Food Eater/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/136c4c57/obj/arm64-v8a/libswappywrapper.so	2a36b53c1c358cc1
+3928	6040	7659490180411499	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	972ae4ec0aac0a94
+3870	6560	7659490185564340	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	7f6f30bbc3c427f3
+6560	6959	7659490188741859	F:/UnityProjects/Food Eater/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/136c4c57/obj/arm64-v8a/libgame.so	5bb66ef7001893f2
